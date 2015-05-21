@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ccom.Pharmacy", "Ccom.Pharmacy\Ccom.Pharmacy.csproj", "{9C15686F-CFAC-4416-90D2-B15A1FF42014}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ccom.Pharmacy", "Ccom.Pharm
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ccom.Pharmacy.DAL", "Ccom.Pharmacy.DAL\Ccom.Pharmacy.DAL.csproj", "{862B1F36-A2C4-453F-B766-9A4CF857CDA8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ccom.Pharmacy.DAL.Entity", "Ccom.Pharmacy.DAL.Entity\Ccom.Pharmacy.DAL.Entity.csproj", "{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ccom.Pharmacy.BL", "Ccom.Pharmacy.BL\Ccom.Pharmacy.BL.csproj", "{9D0F81B1-C975-490C-BD34-9BEEE14EC2E9}"
 EndProject
@@ -41,7 +39,46 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "US_DataAccess", "US_DataAcc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ccom.Pharmacy.Data", "Ccom.Pharmacy.Data\Ccom.Pharmacy.Data.csproj", "{74A75370-6959-498A-909B-B62C11846668}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ccom.Pharmacy.DAL.Entity", "Ccom.Pharmacy.DAL.Entity\Ccom.Pharmacy.DAL.Entity.csproj", "{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}"
+EndProject
 Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://ondebugmode.visualstudio.com/defaultcollection
+		SccProjectUniqueName0 = Ccom.ExceptionHandling\\Ccom.ExceptionHandling.csproj
+		SccProjectName0 = ../Ccom.ExceptionHandling
+		SccAuxPath0 = https://ondebugmode.visualstudio.com/defaultcollection
+		SccLocalPath0 = Ccom.ExceptionHandling
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = Ccom.Common\\Ccom.Common.csproj
+		SccProjectName1 = ../Ccom.Common
+		SccAuxPath1 = https://ondebugmode.visualstudio.com/defaultcollection
+		SccLocalPath1 = Ccom.Common
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = US_DataAccess\\US_DataAccess.csproj
+		SccProjectName2 = ../US_DataAccess
+		SccAuxPath2 = https://ondebugmode.visualstudio.com/defaultcollection
+		SccLocalPath2 = US_DataAccess
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName3 = Ccom.Pharmacy.Data\\Ccom.Pharmacy.Data.csproj
+		SccProjectName3 = ../Ccom.Pharmacy.Data
+		SccAuxPath3 = https://ondebugmode.visualstudio.com/defaultcollection
+		SccLocalPath3 = Ccom.Pharmacy.Data
+		SccProvider3 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName4 = Controls\\LoadingControl\\LoadingControl.csproj
+		SccProjectTopLevelParentUniqueName4 = Ccom.Pharmacy.sln
+		SccProjectName4 = ../Controls/LoadingControl
+		SccAuxPath4 = https://ondebugmode.visualstudio.com/defaultcollection
+		SccLocalPath4 = Controls\\LoadingControl
+		SccProvider4 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName5 = Controls\\PanoramaControl\\PanoramaControl.csproj
+		SccProjectTopLevelParentUniqueName5 = Ccom.Pharmacy.sln
+		SccProjectName5 = ../Controls/PanoramaControl
+		SccAuxPath5 = https://ondebugmode.visualstudio.com/defaultcollection
+		SccLocalPath5 = Controls\\PanoramaControl
+		SccProvider5 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CD_ROM|Any CPU = CD_ROM|Any CPU
 		CD_ROM|x86 = CD_ROM|x86
@@ -85,21 +122,6 @@ Global
 		{862B1F36-A2C4-453F-B766-9A4CF857CDA8}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
 		{862B1F36-A2C4-453F-B766-9A4CF857CDA8}.SingleImage|Any CPU.Build.0 = Release|Any CPU
 		{862B1F36-A2C4-453F-B766-9A4CF857CDA8}.SingleImage|x86.ActiveCfg = Release|Any CPU
-		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
-		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
-		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.CD_ROM|x86.ActiveCfg = Release|Any CPU
-		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
-		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.DVD-5|x86.ActiveCfg = Debug|Any CPU
-		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.Release|x86.ActiveCfg = Release|Any CPU
-		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
-		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.SingleImage|Any CPU.Build.0 = Release|Any CPU
-		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.SingleImage|x86.ActiveCfg = Release|Any CPU
 		{9D0F81B1-C975-490C-BD34-9BEEE14EC2E9}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
 		{9D0F81B1-C975-490C-BD34-9BEEE14EC2E9}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
 		{9D0F81B1-C975-490C-BD34-9BEEE14EC2E9}.CD_ROM|x86.ActiveCfg = Release|Any CPU
@@ -290,6 +312,21 @@ Global
 		{74A75370-6959-498A-909B-B62C11846668}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
 		{74A75370-6959-498A-909B-B62C11846668}.SingleImage|Any CPU.Build.0 = Release|Any CPU
 		{74A75370-6959-498A-909B-B62C11846668}.SingleImage|x86.ActiveCfg = Release|Any CPU
+		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.CD_ROM|x86.ActiveCfg = Release|Any CPU
+		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.DVD-5|x86.ActiveCfg = Debug|Any CPU
+		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.Release|x86.ActiveCfg = Release|Any CPU
+		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{9C182CEF-B1B8-4E80-888D-45ED7EA8801F}.SingleImage|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

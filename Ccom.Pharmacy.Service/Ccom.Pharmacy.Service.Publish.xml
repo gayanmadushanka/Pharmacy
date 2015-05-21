@@ -1,0 +1,40 @@
+<publishData>
+  <publishTarget publishUrl="http://localhost/">
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Data.dll" publishTime="03/08/2015 05:41:28" />
+    <file relUrl="bin/Ccom.ExceptionHandling.pdb" publishTime="03/08/2015 10:16:23" />
+    <file relUrl="bin/Ccom.Pharmacy.DAL.Entity.pdb" publishTime="03/10/2015 00:38:25" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.xml" publishTime="03/08/2015 05:35:50" />
+    <file relUrl="bin/MySql.Data.dll" publishTime="02/11/2015 10:10:17" />
+    <file relUrl="bin/EntityFramework.xml" publishTime="02/11/2015 10:09:02" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Common.xml" publishTime="03/08/2015 05:35:50" />
+    <file relUrl="bin/EntityFramework.SqlServer.dll" publishTime="02/11/2015 10:09:02" />
+    <file relUrl="bin/Ccom.Common.dll" publishTime="03/08/2015 10:16:34" />
+    <file relUrl="bin/Ccom.Pharmacy.DAL.Entity.dll" publishTime="03/10/2015 00:38:25" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Data.xml" publishTime="03/08/2015 05:41:28" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Logging.xml" publishTime="03/08/2015 05:39:34" />
+    <file relUrl="bin/Ccom.Pharmacy.Service.dll" publishTime="03/10/2015 00:38:32" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll" publishTime="03/08/2015 05:35:50" />
+    <file relUrl="bin/System.Windows.Interactivity.dll" publishTime="05/12/2014 21:02:57" />
+    <file relUrl="bin/Ccom.ExceptionHandling.dll" publishTime="03/08/2015 10:16:24" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Common.dll" publishTime="03/08/2015 05:35:50" />
+    <file relUrl="bin/RazorEngine.dll" publishTime="02/28/2014 02:00:58" />
+    <file relUrl="Ccom.Pharmacy.Service.PharmacyService.svc" publishTime="03/10/2015 01:27:19" />
+    <file relUrl="bin/Ccom.Pharmacy.BL.pdb" publishTime="03/10/2015 00:38:29" />
+    <file relUrl="bin/MySql.Data.Entity.EF6.dll" publishTime="02/11/2015 10:10:17" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll" publishTime="03/08/2015 05:41:28" />
+    <file relUrl="bin/Ccom.Pharmacy.DAL.dll" publishTime="03/10/2015 00:38:28" />
+    <file relUrl="bin/itextsharp.dll" publishTime="07/01/2012 23:53:42" />
+    <file relUrl="bin/EntityFramework.SqlServer.xml" publishTime="02/11/2015 10:09:02" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Logging.Database.xml" publishTime="03/08/2015 05:41:28" />
+    <file relUrl="bin/Ccom.Pharmacy.Service.dll.config" publishTime="03/09/2015 02:19:43" />
+    <file relUrl="bin/Ccom.Common.pdb" publishTime="03/08/2015 10:16:34" />
+    <file relUrl="Web.config" publishTime="03/09/2015 02:19:43" />
+    <file relUrl="bin/Ccom.Pharmacy.API.dll" publishTime="03/10/2015 00:38:30" />
+    <file relUrl="bin/EntityFramework.dll" publishTime="02/11/2015 10:09:02" />
+    <file relUrl="bin/Ccom.Pharmacy.DAL.pdb" publishTime="03/10/2015 00:38:28" />
+    <file relUrl="bin/Ccom.Pharmacy.BL.dll" publishTime="03/10/2015 00:38:29" />
+    <file relUrl="bin/Ccom.Pharmacy.API.pdb" publishTime="03/10/2015 00:38:30" />
+    <file relUrl="bin/Ccom.Pharmacy.Service.pdb" publishTime="03/10/2015 00:38:31" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Logging.dll" publishTime="03/08/2015 05:39:34" />
+  </publishTarget>
+</publishData>

@@ -1,0 +1,148 @@
+﻿<UserControl 
+    x:Class="Ccom.Pharmacy.Views.ItemManageView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:viewModels="clr-namespace:Ccom.Pharmacy.ViewModels"
+    xmlns:validations="clr-namespace:Ccom.Pharmacy.Validations"
+    xmlns:lex="http://wpflocalizeextension.codeplex.com"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:utils="clr-namespace:Ccom.Common.Utils;assembly=Ccom.Common"
+    xmlns:entity="clr-namespace:Ccom.Pharmacy.DAL.Entity;assembly=Ccom.Pharmacy.DAL.Entity"
+    DataContext="{DynamicResource ItemManageVm}" 
+    mc:Ignorable="d" >
+    <UserControl.Resources>
+        <viewModels:ItemManageViewModel x:Key="ItemManageVm" x:Name="ItemManageVm"/>
+        <utils:AmountValuesConverter  x:Key="AmountConverter" x:Name="AmountConverter"/>
+        <entity:Person x:Key="Data"/>
+        <entity:ItemEntity x:Key="ItemEntity"/>
+        <Style x:Key="TextBoxInError" TargetType="TextBox">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="true">
+                    <Setter Property="ToolTip"
+                            Value="{Binding RelativeSource={x:Static RelativeSource.Self},
+                        Path=(Validation.Errors)[0].ErrorContent}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="513"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" Margin="5,5,5,0">
+            <!--<TextBlock FontWeight="Bold" FontSize="12">Enter your age:</TextBlock>
+            <TextBox Name="Box1" Focusable="True" FontSize="15" 
+                 Style="{StaticResource TextBoxInError}">
+                <TextBox.Text>
+                    <Binding Path="Age" Source="{StaticResource Data}"
+                         ValidatesOnDataErrors="True"
+                         UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <ExceptionValidationRule/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+            <Label Name="l1" FontSize="15" Height="25" Content="{Binding ElementName=Box1,Path=(Validation.Errors)[0].ErrorContent}" Foreground="Red"/>-->
+            <TextBlock Text="Name" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" Margin="0,0,0,5"/>
+            <TextBox x:Name="TbName" Focusable="True" Style="{StaticResource TextBoxInError}" TextWrapping="Wrap" Margin="0,0,0,5" Width="Auto" MinWidth="150" Height="24" Background="#FFF0F0F0" VerticalContentAlignment="Center">
+                <TextBox.Text>
+                    <Binding Path="Item.Name" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" >
+                        <Binding.ValidationRules>
+                            <ExceptionValidationRule/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+            <!--<Label Name="l2" FontSize="15" Height="25" Content="{Binding ElementName=TbName,Path=(Validation.Errors)[0].ErrorContent}" Foreground="Red"/>-->
+            <TextBlock Text="Unit Price" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" Margin="0,0,0,5"/>
+            <TextBox x:Name="TbUnitPrice" TextChanged="TbUnitPrice_OnTextChanged" TextWrapping="Wrap" Margin="0,0,0,5" Width="Auto" MinWidth="150" Height="24" Background="#FFF0F0F0" VerticalContentAlignment="Center">
+                <TextBox.Text>
+                    <Binding Path="Item.UnitPrice" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" >
+                        <Binding.ValidationRules>
+                            <validations:RequiredFieldRule/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+            <TextBlock Text="WholeSale Price" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" Margin="0,0,0,5"/>
+            <TextBox x:Name="TbWholeSalePrice" TextWrapping="Wrap" Margin="0,0,0,5" Width="Auto" MinWidth="150" Height="24" Background="#FFF0F0F0" VerticalContentAlignment="Center">
+                <TextBox.Text>
+                    <Binding Path="Item.WholeSalePrice" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" >
+                        <Binding.ValidationRules>
+                            <validations:RequiredFieldRule/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+            <TextBlock Text="Discount (%)" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" Margin="0,0,0,5"/>
+            <TextBox x:Name="TbDiscount" TextWrapping="Wrap" Margin="0,0,0,5" Width="Auto" MinWidth="150" Height="24" Background="#FFF0F0F0" VerticalContentAlignment="Center">
+                <TextBox.Text>
+                    <Binding Path="Item.Discount" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" >
+                        <Binding.ValidationRules>
+                            <validations:RequiredFieldRule/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+            <TextBlock Text="Quantity" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" Margin="0,0,0,5"/>
+            <TextBox x:Name="TbQuantity" TextChanged="TbQuantity_OnTextChanged" utils:TextBoxValidation.Filter="PositiveInteger" TextWrapping="Wrap" Margin="0,0,0,5" Width="Auto" MinWidth="150" Height="24" Background="#FFF0F0F0" VerticalContentAlignment="Center">
+                <TextBox.Text>
+                    <Binding Path="Item.Quantity" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" >
+                        <Binding.ValidationRules>
+                            <validations:RequiredFieldRule/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+            <TextBlock Text="Total Amount" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" Margin="0,0,0,5"/>
+            <TextBox x:Name="TbTotalAmount" TextWrapping="Wrap" Margin="0,0,0,5" Width="Auto" MinWidth="150" Height="24" Background="#FFF0F0F0" VerticalContentAlignment="Center" IsEnabled="False">
+                <TextBox.Text>
+                    <Binding Path="Item.TotalAmount" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" >
+                        <Binding.ValidationRules>
+                            <validations:RequiredFieldRule/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+            <TextBlock Text="Expire Date" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" Margin="0,0,0,5"/>
+            <DatePicker x:Name="DpExpireDate" SelectedDate="{Binding Item.ExpireDate, Mode=TwoWay}" Margin="0,0,0,5" Width="Auto" MinWidth="150" Height="24" Background="#FFF0F0F0" VerticalContentAlignment="Center"/>
+            <TextBlock Text="Item Category" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" Margin="0,0,0,5"/>
+            <ComboBox x:Name="CmbItemCategory" ItemsSource="{Binding ItemCategoryList, Mode=TwoWay}" DisplayMemberPath="Name" SelectedItem="{Binding SelectedItemCategory, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,5" Width="Auto" MinWidth="150" Height="24" VerticalAlignment="Center">
+                <ComboBox.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="#FFF0F0F0" Offset="1"/>
+                    </LinearGradientBrush>
+                </ComboBox.Background>
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="SelectionChanged">
+                        <i:InvokeCommandAction Command="{Binding ItemCategorySelectionCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </ComboBox>
+            <TextBlock Text="Supplier" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" Margin="0,0,0,5"/>
+            <ComboBox x:Name="CmbSupplier" ItemsSource="{Binding SupplierList, Mode=TwoWay}" DisplayMemberPath="FirstName" SelectedItem="{Binding SelectedSupplier, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,5" Width="Auto" MinWidth="150" Height="24" VerticalAlignment="Center">
+                <ComboBox.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="#FFF0F0F0" Offset="1"/>
+                    </LinearGradientBrush>
+                </ComboBox.Background>
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="SelectionChanged">
+                        <i:InvokeCommandAction Command="{Binding SupplierSelectionCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="30" Width="175">
+            <Button x:Name="BtnSave" Content="{lex:LocText Ccom.Pharmacy:Resources:Save}" Command="{Binding SavaItemCommand}" MinWidth="80" Margin="5,0" Style="{DynamicResource MenuButtonStyle}" VerticalAlignment="Bottom"/>
+            <Button x:Name="BtnCancel" Content="{lex:LocText Ccom.Pharmacy:Resources:Cancel}" Command="{Binding CancelItemCommand}" MinWidth="80" Margin="0,0,5,0" Style="{DynamicResource MenuButtonStyle}" VerticalAlignment="Bottom"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
+

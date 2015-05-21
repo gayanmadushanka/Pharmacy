@@ -1,0 +1,65 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:Ccom.Pharmacy.ViewModels"
+    x:Class="Ccom.Pharmacy.Views.OperationSelectionView"
+	Width="Auto" Height="Auto"
+    DataContext="{DynamicResource OperationSelectionVm}" mc:Ignorable="d" d:DesignWidth="1751.5" d:DesignHeight="1068">
+    <UserControl.Resources>
+        <viewModels:OperationSelectionViewModel x:Key="OperationSelectionVm" x:Name="OperationSelectionVm"/>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="95"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="TbTitle" VerticalAlignment="Bottom" Style="{DynamicResource TitleTextBlockStyle}" Text="{lex:LocText IOS.HMS.KIOSK.UI:KioskResource:WelcomeToNext}"  HorizontalAlignment="Center" FontSize="64" Margin="0,0,-95,0"/>
+        </Grid>
+        <Grid Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="1400">
+            <TextBlock HorizontalAlignment="Center" Style="{DynamicResource TitleTextBlockStyle}" Text="{lex:LocText IOS.HMS.KIOSK.UI:KioskResource:SelectOption}" VerticalAlignment="Top" Margin="0,-57,0,0"/>
+            <Image Source="pack://siteoforigin:,,,/Images/Hand.PNG" Stretch="Fill" VerticalAlignment="Center" Width="300" Height="300" HorizontalAlignment="Left"/>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,28.5">
+                <Button  x:Name="BtnCheckIn" Command="{Binding CheckInBtnClickedCommand}" HorizontalAlignment="Left" Height="243" Style="{DynamicResource OptionButtonStyle}" VerticalAlignment="Top" Width="342" Margin="0,0,40,0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Path Data="M26.083374,12.821249 C26.723251,12.821249 27.363499,13.0655 27.852001,13.553999 L36.412998,22.115 C37.389999,23.091 37.389999,24.672998 36.412998,25.65 L27.858002,34.205 C27.368999,34.692999 26.73,34.936998 26.09,34.936998 25.450001,34.936998 24.809999,34.692999 24.322001,34.205 23.344999,33.228998 23.344999,31.647001 24.322001,30.67 L28.612999,26.379 2.5,26.379 C1.1189995,26.379 0,25.26 0,23.879 0,22.497999 1.1189995,21.379 2.5,21.379 L28.605999,21.379 24.316999,17.088999 C23.34,16.112999 23.34,14.529999 24.316999,13.553999 24.804001,13.0655 25.443501,12.821249 26.083374,12.821249 z M14.042999,0 L45.869999,0 C47.250999,0 48.369999,1.1189995 48.369999,2.5 L48.369999,45.258001 C48.369999,46.638998 47.250999,47.758001 45.869999,47.758001 L14.042999,47.758001 C12.662001,47.758001 11.542999,46.638998 11.542999,45.258001 L11.542999,35.166998 C11.542999,33.786001 12.662001,32.666998 14.042999,32.666998 15.424,32.666998 16.542999,33.786001 16.542999,35.166998 L16.542999,42.758001 43.369999,42.758001 43.369999,5 16.542999,5 16.542999,12.333 C16.542999,13.713999 15.424,14.833 14.042999,14.833 12.662001,14.833 11.542999,13.713999 11.542999,12.333 L11.542999,2.5 C11.542999,1.1189995 12.662001,0 14.042999,0 z" Fill="{DynamicResource OptionButtonIconBrush}" Stretch="Fill" Width="86" Height="86" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="{lex:LocText IOS.HMS.KIOSK.UI:KioskResource:CheckIn}" VerticalAlignment="Center" Grid.Row="1"/>
+                    </Grid>
+                </Button>
+                <Button x:Name="BtnCheckOut" Command="{Binding CheckOutBtnClickedCommand}"  HorizontalAlignment="Left" Height="243" Style="{DynamicResource OptionButtonStyle}" VerticalAlignment="Top" Width="342">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Path Data="M44.308875,12.821251 C44.948749,12.821251 45.5885,13.0655 46.075999,13.554001 L54.638,22.115 C55.614001,23.091 55.614001,24.674 54.638999,25.650002 L46.083999,34.205002 C45.596,34.693001 44.956,34.937 44.316001,34.937 43.676002,34.937 43.034999,34.693001 42.547999,34.205002 41.570998,33.229 41.570998,31.646999 42.547999,30.669998 L46.838,26.379002 20.726001,26.379002 C19.345,26.379002 18.226001,25.259998 18.226001,23.879002 18.226001,22.497999 19.345,21.379 20.726001,21.379 L46.830001,21.379 42.540999,17.089001 C41.563998,16.113001 41.563998,14.530001 42.540999,13.554001 43.029002,13.0655 43.669002,12.821251 44.308875,12.821251 z M2.5,0 L34.326999,0 C35.707999,0 36.826999,1.1190004 36.826999,2.5 L36.826999,12.333 C36.826999,13.714001 35.707999,14.833 34.326999,14.833 32.945998,14.833 31.826999,13.714001 31.826999,12.333 L31.826999,5 5,5 5,42.757999 31.826999,42.757999 31.826999,35.167 C31.826999,33.785999 32.945998,32.667 34.326999,32.667 35.707999,32.667 36.826999,33.785999 36.826999,35.167 L36.826999,45.257999 C36.826999,46.639 35.707999,47.757999 34.326999,47.757999 L2.5,47.757999 C1.119,47.757999 0,46.639 0,45.257999 L0,2.5 C0,1.1190004 1.119,0 2.5,0 z" Stretch="Fill" Width="100" Height="86" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="{DynamicResource OptionButtonIconBrush}"/>
+                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="{lex:LocText IOS.HMS.KIOSK.UI:KioskResource:CheckOut}" VerticalAlignment="Center" Grid.Row="1"/>
+                    </Grid>
+                </Button>
+                <Button x:Name="BtnReservation" Content="Reservation" Command="{Binding ReservationBtnClickedCommand}" Visibility="Collapsed" Margin="0,0,10,0"/>
+            </StackPanel>
+            <Image Source="pack://siteoforigin:,,,/Images/Hand.PNG" Stretch="Fill" VerticalAlignment="Center" Width="300" Height="300" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        <SkewTransform AngleY="0" AngleX="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Grid>
+    </Grid>
+</UserControl>

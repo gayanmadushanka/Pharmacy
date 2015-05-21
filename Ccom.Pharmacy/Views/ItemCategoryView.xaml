@@ -1,0 +1,60 @@
+﻿<UserControl 
+    x:Class="Ccom.Pharmacy.Views.ItemCategoryView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:ei="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions"
+    xmlns:viewModels="clr-namespace:Ccom.Pharmacy.ViewModels"
+    xmlns:lex="http://wpflocalizeextension.codeplex.com"
+    mc:Ignorable="d" DataContext="{DynamicResource ItemCategoryVm}" 
+    d:DesignWidth="615" d:DesignHeight="224" Background="{DynamicResource AccentColorBrush4}">
+    <UserControl.Resources>
+        <viewModels:ItemCategoryViewModel x:Key="ItemCategoryVm" x:Name="ItemCategoryVm"/>
+    </UserControl.Resources>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup" ei:ExtendedVisualStateManager.UseFluidLayout="True">
+                <VisualStateGroup.Transitions>
+                    <VisualTransition GeneratedDuration="0:0:0.3"/>
+                </VisualStateGroup.Transitions>
+                <VisualState x:Name="VisualStateOut"/>
+                <VisualState x:Name="VisualStateIn">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="GrdManageView">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Button x:Name="BtnAddNew" Content="{lex:LocText Ccom.Pharmacy:Resources:AddNew}" Command="{Binding AddItemCategoryCommand}" HorizontalAlignment="Left" MinWidth="80" Style="{DynamicResource AddButtonStyle}"  />
+        <Grid Grid.Row="1" Margin="5,0,5,5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <DataGrid CanUserAddRows="False" x:Name="DgItemCategory" GridLinesVisibility="All" AutoGenerateColumns="False"  ItemsSource="{Binding ItemCategoryList}"  IsReadOnly="True" RowBackground="{DynamicResource BackgroundBrush}" SelectionMode="Single" >
+                <DataGrid.Resources>
+                    <DataTemplate x:Key="EditItemCategoryDataTemplate">
+                        <Button  Command="{Binding DataContext.EditItemCategoryCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, Mode=FindAncestor}}" CommandParameter="{Binding}" Style="{DynamicResource EditButtonStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </DataTemplate>
+                    <DataTemplate x:Key="DeleteItemCategoryDataTemplate">
+                        <Button  Command="{Binding DataContext.DeleteItemCategoryCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, Mode=FindAncestor}}" CommandParameter="{Binding}" Style="{DynamicResource DeleteButtonStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </DataTemplate>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Name}"  Header="Name" Width="*"/>
+                    <DataGridTemplateColumn CellTemplate="{StaticResource EditItemCategoryDataTemplate}" />
+                    <DataGridTemplateColumn CellTemplate="{StaticResource DeleteItemCategoryDataTemplate}" />
+                </DataGrid.Columns>
+            </DataGrid>
+            <Grid x:Name="GrdManageView" Grid.Column="1" Margin="5,0,0,0" Visibility="Collapsed"/>
+        </Grid>
+    </Grid>
+</UserControl>
+

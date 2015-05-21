@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<PluginConfiguration>
+  <Configurations>
+    <ConfigurationItem>
+      <Key>Server_Name</Key>
+      <Value>smtp.gmail.com</Value>
+    </ConfigurationItem>
+    <ConfigurationItem>
+      <Key>Sender_Address</Key>
+      <Value>rangani.peramuna@gmail.com</Value>
+    </ConfigurationItem>
+    <ConfigurationItem>
+      <Key>Password</Key>
+      <Value>rangani90118</Value>
+    </ConfigurationItem>
+    <ConfigurationItem>
+      <Key>Receiver_Address</Key>
+      <Value>rangani.peramuna@gmail.com</Value>
+    </ConfigurationItem>
+    <ConfigurationItem>
+      <Key>Template_Folder_Path</Key>
+      <Value>D:\WorkDir_IOneSoft\HMS.KIOSK\IOS.HMS.KIOSK\IOS.Common\Email\templates\</Value>
+    </ConfigurationItem>
+    
+
+    <!--<ConfigurationItem>
+      <Name>CC_Address</Name>
+      <Value></Value>
+    </ConfigurationItem>
+    <ConfigurationItem>
+      <Name>BCC_Address</Name>
+      <Value></Value>
+    </ConfigurationItem>
+    <ConfigurationItem>
+      <Name>Header_Text_FilePath</Name>
+      <Value></Value>
+    </ConfigurationItem>
+    <ConfigurationItem>
+      <Name>Footer_Text_FilePath</Name>
+      <Value></Value>
+    </ConfigurationItem>
+    <ConfigurationItem>
+      <Name>Subject_Text_FilePath</Name>
+      <Value></Value>
+    </ConfigurationItem>-->
+  </Configurations>
+</PluginConfiguration>
+
+
+
+
+
+
+
+

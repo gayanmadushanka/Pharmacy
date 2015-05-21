@@ -1,0 +1,11 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	
+	<FontFamily x:Key="TrashHandFontFamily">/IOS.HMS.KIOSK.UI;component/Theme/Fonts/TrashHand.ttf#TrashHand</FontFamily>
+
+    <FontFamily x:Key="GaramondDefaultFontFamily">/IOS.HMS.KIOSK.UI;component/Theme/Fonts/Garamond.ttf#Garamond</FontFamily>
+    <FontFamily x:Key="GaramondBoldFontFamily">/IOS.HMS.KIOSK.UI;component/Theme/Fonts/GaramondBold.TTF#Garamond</FontFamily>
+    <FontFamily x:Key="GaramondLiteFontFamily">/IOS.HMS.KIOSK.UI;component/Theme/Fonts/GaramondLite.TTF#Garamond</FontFamily>
+
+</ResourceDictionary>

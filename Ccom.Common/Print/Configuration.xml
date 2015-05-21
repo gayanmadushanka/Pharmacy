@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ConfigurationItemList xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Configurations>
+    <ConfigurationItem>
+      <Key>Name</Key>
+      <Value>SISILA PHARMACY</Value>
+    </ConfigurationItem>
+    <ConfigurationItem>
+      <Key>Address</Key>
+      <Value>No-191,Maththegoda Road,Kottawa.</Value>
+    </ConfigurationItem>
+    <ConfigurationItem>
+      <Key>ContactNo</Key>
+      <Value>0112172079</Value>
+    </ConfigurationItem>
+    <ConfigurationItem>
+      <Key>Email</Key>
+      <Value></Value>
+    </ConfigurationItem>
+      <ConfigurationItem>
+      <Key>PrinterName</Key>
+      <Value></Value>
+    </ConfigurationItem>
+  </Configurations>
+</ConfigurationItemList>

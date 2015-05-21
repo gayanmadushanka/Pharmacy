@@ -1,0 +1,75 @@
+﻿<UserControl 
+    x:Class="Ccom.Pharmacy.Views.AuthenticationView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:viewModels="clr-namespace:Ccom.Pharmacy.ViewModels"
+    xmlns:lex="http://wpflocalizeextension.codeplex.com"
+    mc:Ignorable="d" d:DesignWidth="615" d:DesignHeight="224"
+    DataContext="{DynamicResource AuthenticationVm}" Background="{DynamicResource AccentColorBrush4}">
+    <UserControl.Resources>
+        <viewModels:AuthenticationViewModel x:Key="AuthenticationVm" x:Name="AuthenticationVm"/>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutGrid">
+        <Grid Margin="5" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <StackPanel HorizontalAlignment="Left">
+                    <TextBlock Text="User Role" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,10,0" />
+                    <ComboBox x:Name="CmbUserRole" Height="Auto" ItemsSource="{Binding UserRoleList}" DisplayMemberPath="Name" SelectedItem="{Binding SelectedUserRole}" Width="200">
+                    	<ComboBox.Background>
+                    		<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    			<GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    			<GradientStop Color="#FFF0F0F0" Offset="1"/>
+                    		</LinearGradientBrush>
+                    	</ComboBox.Background>
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="DropDownClosed">
+                                <i:InvokeCommandAction Command="{Binding ChangeUserRoleComand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </ComboBox>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1" Margin="0,0,0,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="All Module" FontSize="13" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBlock Grid.Column="2" Text="Assigned Module" FontSize="13" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <ListBox x:Name="AllModuleListBox" DisplayMemberPath="Name" ItemsSource="{Binding ModuleList}" Grid.Column="0" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0,22,0,0" Background="#FFF0F0F0" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SelectionChanged">
+                            <i:InvokeCommandAction Command="{Binding ModuleSelectionCommand}" CommandParameter="{Binding SelectedItem, ElementName=AllModuleListBox}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </ListBox>
+                <!--<StackPanel Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center" Margin="5,0,0,0">
+                    --><!--<Button Content="Add All" Height="26" Command="{Binding AddAllCommand}" IsEnabled="{Binding BtnAddAll}" MinWidth="80" Margin="0,0,0,5"/>--><!--
+                    <Button Content="Add Selected" Height="26" Command="{Binding AddSelectedCommand}" CommandParameter="{Binding SelectedItem, ElementName=AllModuleListBox}" IsEnabled="{Binding BtnAddSelectedEnabled}" MinWidth="80" Margin="0,0,0,5" Style="{DynamicResource ButtonStyle}"/>
+                    <Button Content="Remove Selected" Height="26" Command="{Binding RemoveSelectedCommand}" CommandParameter="{Binding SelectedItem, ElementName=AssignedModuleListBox}" IsEnabled="{Binding BtnRemoveSelectedEnabled}" MinWidth="80" Margin="0,0,0,5" Style="{DynamicResource ButtonStyle}"/>
+                    --><!--<Button Content="Remove All" Height="26" Command="{Binding RemoveAllCommand}" IsEnabled="{Binding BtnRemoveAll}" MinWidth="80" Margin="0,0,0,5"/>--><!--
+                </StackPanel>-->
+                <ListBox x:Name="AssignedModuleListBox" DisplayMemberPath="Name" ItemsSource="{Binding AssignedModuleList}" Grid.Column="2" ScrollViewer.VerticalScrollBarVisibility="Visible" Margin="0,22,0,0" Background="#FFF0F0F0" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SelectionChanged">
+                            <i:InvokeCommandAction Command="{Binding AssignedModuleSelectionCommand}" CommandParameter="{Binding SelectedItem, ElementName=AssignedModuleListBox}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </ListBox>
+            </Grid>
+            <StackPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
+                <Button x:Name="BtnReset" Content="{lex:LocText Ccom.Pharmacy:Resources:Reset}" Height="26" Command="{Binding ResetAuthenticationCommand}" MinWidth="80" Margin="0,0,5,0" Background="{DynamicResource AccentColorBrush3}" Style="{DynamicResource MenuButtonStyle}"/>
+                <Button x:Name="BtnSave" Content="{lex:LocText Ccom.Pharmacy:Resources:Save}" Height="26" Command="{Binding SaveAuthenticationCommand}" MinWidth="80" Margin="0,0,5,0" Style="{DynamicResource MenuButtonStyle}"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

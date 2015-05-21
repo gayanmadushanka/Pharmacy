@@ -1,0 +1,94 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--Layout colors-->
+    <SolidColorBrush x:Key="BackgroundBrush" Color="#FFB8BDC0"/>
+    <SolidColorBrush x:Key="TitleTextblockBrush" Color="#FF000000"/>
+    <SolidColorBrush x:Key="ContentTextblockBrush" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="FormTextblockBrush" Color="#FF000000"/>
+
+    <!-- 
+    ***************************************************************************
+    Default Controllers Color Brushes
+    ***************************************************************************
+    -->
+    <SolidColorBrush x:Key="ControllersMousehoverBoderBrush" Color="#FF7A7A7A"/>
+    <SolidColorBrush x:Key="ControllersDesabledBackGroundBrush" Color="#FFDDDEDE"/>
+    <SolidColorBrush x:Key="ControllersDesabledBoderBrush" Color="#FFC1C2C2"/>
+    <!-- 
+    ***************************************************************************
+    Data Grid Button Color Brushes
+    ***************************************************************************
+	-->
+    <SolidColorBrush x:Key="DeleteButtonPathBrush" Color="#FF994848"/>
+    <SolidColorBrush x:Key="DeleteButtonBGBrush" Color="White"/>
+    <SolidColorBrush x:Key="EditButtonPathBrush" Color="Black"/>
+    <SolidColorBrush x:Key="EditButtonBGBrush" Color="White"/>
+    <!--<SolidColorBrush x:Key="RefreshButtonPathBrush" Color="Black"/>
+    <SolidColorBrush x:Key="RefreshButtonBGBrush" Color="White"/>-->
+    
+    <!--Button colors-->
+    <SolidColorBrush x:Key="ButtonTextBrush" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="ButtonIconBrush" Color="White"/>
+    <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="#FF000000"/>
+    <SolidColorBrush x:Key="ButtonBorderBrush" Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="OptionButtonTextBrush" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="OptionButtonIconBrush" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="OptionButtonBackgroundBrush" Color="#FF055280"/>
+    <SolidColorBrush x:Key="OptionButtonBorderBrush" Color="#FF032f52"/>
+
+    <SolidColorBrush x:Key="TextBoxBackgroundBrush" Color="#FF3d515a"/>
+    <SolidColorBrush x:Key="TextBoxTextBrush" Color="#FFFFFFFF"/>
+
+    <SolidColorBrush x:Key="GroupBorderBrush" Color="#FF000000"/>
+    <SolidColorBrush x:Key="DeviderBrush" Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="KeyboardButtonBorderBrush" Color="#FF055280"/>
+    <SolidColorBrush x:Key="KeyboardButtonBackgroundBrush" Color="#FFB8BDC0"/>
+    <SolidColorBrush x:Key="KeyboardButtonIconBrush" Color="#FFffffff"/>
+    <SolidColorBrush x:Key="KeyboardButtonForgroundBrush" Color="#FF055280"/>
+
+    <SolidColorBrush x:Key="KeyboardButtonHoverFrogroundBrush" Color="#FFFFFFFF"/>
+
+    <SolidColorBrush x:Key="KeyboardspBtnBackgroundBrush" Color="#FF055280"/>
+    <SolidColorBrush x:Key="KeyspbtnHoverBrush" Color="#FFB8BDC0"/>
+    <SolidColorBrush x:Key="KeyboardButtonIconHoverBrush" Color="#FF055280"/>
+
+    <SolidColorBrush x:Key="DataRowBackgroundBrush" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="DataRowBorderBrush" Color="#FF055280"/>
+
+    <SolidColorBrush x:Key="DataButtonBackgroundBrush" Color="#FF055280"/>
+    <SolidColorBrush x:Key="DataButtonForgroundBrush" Color="#FFFFFFFF"/>
+
+    <SolidColorBrush x:Key="RoomTypeButtonBackgroundBrush" Color="#FF8B8B8B"/>
+    <SolidColorBrush x:Key="RoomForgroundBrush" Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="scrolerSelectBrush" Color="#FF055280"/>
+
+    <!--<SolidColorBrush x:Key="AccentColorBrush" Color="#FF2D6FA5"/>
+    <SolidColorBrush x:Key="AccentColorBrush3" Color="#66119EDA"/>-->
+
+    <!--ACCENT COLORS-->
+    <Color x:Key="HighlightColor">#FF086F9E</Color>
+
+    <!--80%-->
+    <Color x:Key="AccentColor">#FF2D6FA5</Color>
+    <!--60%-->
+    <Color x:Key="AccentColor2">#99119EDA</Color>
+    <!--40%-->
+    <Color x:Key="AccentColor3">#66119EDA</Color>
+    <!--20%-->
+    <Color x:Key="AccentColor4">#FF1F4361</Color>
+
+    <SolidColorBrush x:Key="HighlightBrush" Color="{StaticResource HighlightColor}" />
+    <SolidColorBrush x:Key="AccentColorBrush" Color="{StaticResource AccentColor}"/>
+    <SolidColorBrush x:Key="AccentColorBrush2" Color="{StaticResource AccentColor2}"/>
+    <SolidColorBrush x:Key="AccentColorBrush3" Color="{StaticResource AccentColor3}"/>
+    <SolidColorBrush x:Key="AccentColorBrush4" Color="{StaticResource AccentColor4}"/>
+    <SolidColorBrush x:Key="GeayColorBrush" Color="#FFF0F0F0"></SolidColorBrush>
+    <SolidColorBrush x:Key="ControllersFocusedBoderBrush" Color="#FF4d8693"/>
+    <SolidColorBrush x:Key="DataGridGridrowValidationBoderBrush" Color="#FFDC000C"/>
+
+</ResourceDictionary>

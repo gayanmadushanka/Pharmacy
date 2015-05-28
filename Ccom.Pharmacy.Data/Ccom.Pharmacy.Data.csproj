@@ -70,9 +70,17 @@
     <Compile Include="SystemObjects\ISQLServerAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Ccom.Common\Ccom.Common.csproj">
+      <Project>{5ade4fb8-9296-4cc7-8cf5-72c7dea3ac40}</Project>
+      <Name>Ccom.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Ccom.ExceptionHandling\Ccom.ExceptionHandling.csproj">
       <Project>{a1b25e33-e8d4-42d9-9897-df460b76aa60}</Project>
       <Name>Ccom.ExceptionHandling</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ccom.Pharmacy.DAL.Entity\Ccom.Pharmacy.DAL.Entity.csproj">
+      <Project>{9c182cef-b1b8-4e80-888d-45ed7ea8801f}</Project>
+      <Name>Ccom.Pharmacy.DAL.Entity</Name>
     </ProjectReference>
     <ProjectReference Include="..\US_DataAccess\US_DataAccess.csproj">
       <Project>{771b4dad-8a13-46e7-bebc-54c3060170e4}</Project>

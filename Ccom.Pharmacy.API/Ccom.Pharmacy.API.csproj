@@ -47,6 +47,10 @@
       <Project>{9d0f81b1-c975-490c-bd34-9beee14ec2e9}</Project>
       <Name>Ccom.Pharmacy.BL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Ccom.Pharmacy.DAL.Entity\Ccom.Pharmacy.DAL.Entity.csproj">
+      <Project>{9c182cef-b1b8-4e80-888d-45ed7ea8801f}</Project>
+      <Name>Ccom.Pharmacy.DAL.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

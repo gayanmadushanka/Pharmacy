@@ -42,12 +42,12 @@ namespace Ccom.Pharmacy.Service
 
         public List<ItemEntity> GetAllItem()
         {
-            return PharmacyAPI.GetAllItemAsync();
+            return PharmacyAPI.GetAllItem();
         }
 
         public int AddUpdateItem(ItemEntity itemEntity)
         {
-            return PharmacyAPI.AddUpdateItemAsync(itemEntity);
+            return PharmacyAPI.AddUpdateItem(itemEntity);
         }
 
         public bool DeleteItem(int id)
@@ -64,7 +64,7 @@ namespace Ccom.Pharmacy.Service
 
         public List<SupplierEntity> GetAllSupplier()
         {
-            return PharmacyAPI.GetAllSupplierAsync();
+            return PharmacyAPI.GetAllSupplier();
         }
 
         public int AddUpdateSupplier(SupplierEntity supplierEntity)
@@ -136,7 +136,7 @@ namespace Ccom.Pharmacy.Service
 
         public List<ItemCategoryEntity> GetAllItemCategory()
         {
-            return PharmacyAPI.GetAllItemCategoryAsync();
+            return PharmacyAPI.GetAllItemCategory();
         }
 
         public int AddUpdateItemCategory(ItemCategoryEntity itemEntity)

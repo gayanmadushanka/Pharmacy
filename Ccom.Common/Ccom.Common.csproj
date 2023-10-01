@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Ccom.Common</RootNamespace>
     <AssemblyName>Ccom.Common</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
@@ -39,6 +39,9 @@
   <ItemGroup>
     <Reference Include="itextsharp">
       <HintPath>..\Lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -109,6 +112,7 @@
     <None Include="Email\Templates\ApproveLeavesMailTemplate\ApproveLeaves.html.cshtml" />
     <None Include="Email\Templates\CheckInSuccessTemplate\ForgotPasswordMailTemplate.cshtml" />
     <None Include="Email\Templates\ForgotPasswordMailTemplate\ForgotPasswordMailTemplate.cshtml" />
+    <None Include="packages.config" />
     <None Include="Print\Resources\Fonts\OpenSans-Light.ttf" />
     <None Include="Print\Resources\Fonts\OpenSans-Regular.ttf" />
     <None Include="Print\Resources\Fonts\OpenSans-Semibold.ttf" />

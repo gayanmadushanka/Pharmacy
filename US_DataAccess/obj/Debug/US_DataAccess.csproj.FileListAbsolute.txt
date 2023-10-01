@@ -1,0 +1,9 @@
+D:\Workspace\Pharmacy\US_DataAccess\bin\Debug\US_DataAccess.dll.config
+D:\Workspace\Pharmacy\US_DataAccess\bin\Debug\US_DataAccess.dll
+D:\Workspace\Pharmacy\US_DataAccess\bin\Debug\US_DataAccess.pdb
+D:\Workspace\Pharmacy\US_DataAccess\bin\Debug\US.Payment.Core.dll
+D:\Workspace\Pharmacy\US_DataAccess\obj\Debug\US_DataAccess.csproj.AssemblyReference.cache
+D:\Workspace\Pharmacy\US_DataAccess\obj\Debug\US_DataAccess.csproj.CoreCompileInputs.cache
+D:\Workspace\Pharmacy\US_DataAccess\obj\Debug\US_DataAccess.csproj.CopyComplete
+D:\Workspace\Pharmacy\US_DataAccess\obj\Debug\US_DataAccess.dll
+D:\Workspace\Pharmacy\US_DataAccess\obj\Debug\US_DataAccess.pdb

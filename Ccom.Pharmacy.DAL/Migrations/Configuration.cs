@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.ObjectModel;
 using Ccom.Pharmacy.DAL.Entity;
 using MySql.Data.Entity;
@@ -17,71 +17,71 @@ namespace Ccom.Pharmacy.DAL.Migrations
 
         protected override void Seed(DataBaseContext context)
         {
-            //context.UserDbSet.AddOrUpdate(
-            //    p => p.UserName,
-            //    //1
-            //    //new UserEntity()
-            //    //{
-            //    //    FirstName = "Admin User",
-            //    //    UserName = "a",
-            //    //    Password = "/NNfWRStbZsUyc88S5tjhA==",
-            //    //    Email = "admin@mail.com",
-            //    //    MobileNumber = "0712222222",
-            //    //    ImagePath = "/Images/userdefault.png",
-            //    //    UserRole = new UserRoleEntity()
-            //    //    {
-            //    //        Name = "Admin User",
-            //    //        Description = "Admin User",
-            //    //        ModuleEntities = GetAdminModuleEntities()
-            //    //    }
-            //    //}
-            //    //,
-            //    //2
-            //    new UserEntity()
-            //    {
-            //        FirstName = "Typical User",
-            //        UserName = "d",
-            //        Password = "zXdVUpC4anLlM9Fxp9jRuQ==",
-            //        Email = "typical@mail.com",
-            //        MobileNumber = "0712222222",
-            //        ImagePath = "/Images/profile.png",
-            //        UserRole = new UserRoleEntity()
-            //        {
-            //            Name = "Typical User",
-            //            Description = "Typical User"
-            //            //,
-            //            //ModuleEntities = GetTypicalUserModuleEntities()
-            //        }
-            //    }
-            //);
+            context.UserDbSet.AddOrUpdate(
+                p => p.UserName,
+                //1
+                new UserEntity()
+                {
+                    FirstName = "Admin User",
+                    UserName = "a",
+                    Password = "/NNfWRStbZsUyc88S5tjhA==",
+                    Email = "admin@mail.com",
+                    MobileNumber = "0712222222",
+                    ImagePath = "/Images/userdefault.png",
+                    UserRole = new UserRoleEntity()
+                    {
+                        Name = "Admin User",
+                        Description = "Admin User",
+                        ModuleEntities = GetAdminModuleEntities()
+                    }
+                }
+                //,
+                //2
+                //new UserEntity()
+                //{
+                //    FirstName = "Typical User",
+                //    UserName = "d",
+                //    Password = "zXdVUpC4anLlM9Fxp9jRuQ==",
+                //    Email = "typical@mail.com",
+                //    MobileNumber = "0712222222",
+                //    ImagePath = "/Images/profile.png",
+                //    UserRole = new UserRoleEntity()
+                //    {
+                //        Name = "Typical User",
+                //        Description = "Typical User"
+                //        //,
+                //        //ModuleEntities = GetTypicalUserModuleEntities()
+                //    }
+                //}
+            );
 
             //1
-            //context.ItemCategoryDbSet.AddOrUpdate(
-            //    p => p.Name,
-            //    GetItemCategoryEntity("Pain Relief"),
-            //    GetItemCategoryEntity("Stop Smoking"),
-            //    GetItemCategoryEntity("Weight Loss")
-            //);
+            context.ItemCategoryDbSet.AddOrUpdate(
+                p => p.Name,
+                GetItemCategoryEntity("Pain Relief"),
+                GetItemCategoryEntity("Stop Smoking"),
+                GetItemCategoryEntity("Weight Loss")
+            );
 
-            //context.SupplierDbSet.AddOrUpdate(
-            //    p => p.FirstName,
-            //    new SupplierEntity
-            //    {
-            //        FirstName = "Gayan",
-            //        LastName = "Madushanka",
-            //        AccountNumber = "123",
-            //        Address = "Anuradhapura",
-            //        ContactNumber = "0252225955"
-            //    },
-            //  new SupplierEntity
-            //  {
-            //      FirstName = "Wasana",
-            //      LastName = "Dilhani",
-            //      AccountNumber = "123",
-            //      Address = "Kandy",
-            //      ContactNumber = "0812225955"
-            //  }
-            //);
+            context.SupplierDbSet.AddOrUpdate(
+                p => p.FirstName,
+                new SupplierEntity
+                {
+                    FirstName = "Gayan",
+                    LastName = "Madushanka",
+                    AccountNumber = "123",
+                    Address = "Anuradhapura",
+                    ContactNumber = "0252225955"
+                },
+              new SupplierEntity
+              {
+                  FirstName = "Wasana",
+                  LastName = "Dilhani",
+                  AccountNumber = "123",
+                  Address = "Kandy",
+                  ContactNumber = "0812225955"
+              }
+            );
 
             //2
             //context.ItemDbSet.AddOrUpdate(

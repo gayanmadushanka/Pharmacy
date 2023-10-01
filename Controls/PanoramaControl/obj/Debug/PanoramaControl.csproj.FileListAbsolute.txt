@@ -1,0 +1,13 @@
+D:\Workspace\Pharmacy\Controls\PanoramaControl\bin\Debug\PanoramaControl.dll
+D:\Workspace\Pharmacy\Controls\PanoramaControl\bin\Debug\PanoramaControl.pdb
+D:\Workspace\Pharmacy\Controls\PanoramaControl\obj\Debug\PanoramaControl.csproj.AssemblyReference.cache
+D:\Workspace\Pharmacy\Controls\PanoramaControl\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Workspace\Pharmacy\Controls\PanoramaControl\obj\Debug\PanoramaControl_MarkupCompile.cache
+D:\Workspace\Pharmacy\Controls\PanoramaControl\obj\Debug\PanoramaControl_MarkupCompile.lref
+D:\Workspace\Pharmacy\Controls\PanoramaControl\obj\Debug\Themes\Generic.baml
+D:\Workspace\Pharmacy\Controls\PanoramaControl\obj\Debug\PanoramaControl.g.resources
+D:\Workspace\Pharmacy\Controls\PanoramaControl\obj\Debug\PanoramaControl.Properties.Resources.resources
+D:\Workspace\Pharmacy\Controls\PanoramaControl\obj\Debug\PanoramaControl.csproj.GenerateResource.cache
+D:\Workspace\Pharmacy\Controls\PanoramaControl\obj\Debug\PanoramaControl.csproj.CoreCompileInputs.cache
+D:\Workspace\Pharmacy\Controls\PanoramaControl\obj\Debug\PanoramaControl.dll
+D:\Workspace\Pharmacy\Controls\PanoramaControl\obj\Debug\PanoramaControl.pdb

@@ -1,0 +1,6 @@
+D:\Workspace\Pharmacy\Ccom.Pharmacy.DAL.Entity\bin\Debug\Ccom.Pharmacy.DAL.Entity.dll
+D:\Workspace\Pharmacy\Ccom.Pharmacy.DAL.Entity\bin\Debug\Ccom.Pharmacy.DAL.Entity.pdb
+D:\Workspace\Pharmacy\Ccom.Pharmacy.DAL.Entity\obj\Debug\Ccom.Pharmacy.DAL.Entity.csproj.AssemblyReference.cache
+D:\Workspace\Pharmacy\Ccom.Pharmacy.DAL.Entity\obj\Debug\Ccom.Pharmacy.DAL.Entity.csproj.CoreCompileInputs.cache
+D:\Workspace\Pharmacy\Ccom.Pharmacy.DAL.Entity\obj\Debug\Ccom.Pharmacy.DAL.Entity.dll
+D:\Workspace\Pharmacy\Ccom.Pharmacy.DAL.Entity\obj\Debug\Ccom.Pharmacy.DAL.Entity.pdb

@@ -45,11 +45,11 @@
             <Button x:Name="BtnAddNew" Content="{lex:LocText Ccom.Pharmacy:Resources:AddNew}" Command="{Binding AddItemCommand}" HorizontalAlignment="Left" MinWidth="80" Style="{DynamicResource AddButtonStyle}"  />
 			<TextBlock TextWrapping="Wrap" Text="Name" VerticalAlignment="Center" Margin="5,0" FontWeight="Bold"/>
             <TextBox TextWrapping="Wrap" Text="{Binding SearchByItemName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="Auto" MinWidth="150" Margin="5,0,0,0" Height="24" Background="#FFF0F0F0" VerticalContentAlignment="Center">
-                <i:Interaction.Triggers>
+                <!--<i:Interaction.Triggers>
                     <i:EventTrigger EventName="KeyUp">
                         <i:InvokeCommandAction Command="{Binding FilterCommand}"/>
                     </i:EventTrigger>
-                </i:Interaction.Triggers>
+                </i:Interaction.Triggers>-->
             </TextBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="300,0,0,0">
@@ -61,11 +61,11 @@
                         <GradientStop Color="#FFF0F0F0" Offset="1"/>
                     </LinearGradientBrush>
                 </ComboBox.Background>
-                <i:Interaction.Triggers>
+                <!--<i:Interaction.Triggers>
                     <i:EventTrigger EventName="SelectionChanged">
                         <i:InvokeCommandAction Command="{Binding FilterCommand}"/>
                     </i:EventTrigger>
-                </i:Interaction.Triggers>
+                </i:Interaction.Triggers>-->
             </ComboBox>
 		</StackPanel>
 		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Column="2" Margin="20.793,0">

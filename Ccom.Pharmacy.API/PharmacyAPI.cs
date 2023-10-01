@@ -61,30 +61,30 @@ namespace Ccom.Pharmacy.API
             return ItemBL.GetAllItem();
         }
 
-        //public static List<ItemEntity> GetAllItem()
-        //{
-        //    return ItemBL.GetAllItem();
-        //}
+        public static List<ItemEntity> GetAllItem()
+        {
+            return ItemBL.GetAllItem();
+        }
 
         public static async Task<int> AddUpdateItemAsync(ItemEntity itemEntity)
         {
             return ItemBL.AddUpdateItem(itemEntity);
         }
 
-        //public static int AddUpdateItem(ItemEntity itemEntity)
-        //{
-        //    return ItemBL.AddUpdateItem(itemEntity);
-        //}
+        public static int AddUpdateItem(ItemEntity itemEntity)
+        {
+            return ItemBL.AddUpdateItem(itemEntity);
+        }
 
         public static async Task<bool> DeleteItemAsync(int id)
         {
             return ItemBL.DeleteItem(id);
         }
 
-        //public static bool DeleteItem(int id)
-        //{
-        //    return ItemBL.DeleteItem(id);
-        //}
+        public static bool DeleteItem(int id)
+        {
+            return ItemBL.DeleteItem(id);
+        }
 
         #endregion
 
@@ -100,7 +100,17 @@ namespace Ccom.Pharmacy.API
             return SupplierBL.GetAllSupplier();
         }
 
+        public static List<SupplierEntity> GetAllSupplier()
+        {
+            return SupplierBL.GetAllSupplier();
+        }
+
         public static async Task<int> AddUpdateSupplierAsync(SupplierEntity supplierEntity)
+        {
+            return SupplierBL.AddUpdateSupplier(supplierEntity);
+        }
+
+        public static int AddUpdateSupplier(SupplierEntity supplierEntity)
         {
             return SupplierBL.AddUpdateSupplier(supplierEntity);
         }
@@ -124,12 +134,28 @@ namespace Ccom.Pharmacy.API
             return InvoiceBL.GetAllInvoice();
         }
 
+        public static  List<InvoiceEntity> GetAllInvoice()
+        {
+            return InvoiceBL.GetAllInvoice();
+        }
+
         public static async Task<int> AddUpdateInvoiceAsync(InvoiceEntity invoiceEntity)
         {
             return InvoiceBL.AddUpdateInvoice(invoiceEntity);
         }
 
+
+        public static int AddUpdateInvoice(InvoiceEntity invoiceEntity)
+        {
+            return InvoiceBL.AddUpdateInvoice(invoiceEntity);
+        }
+
         public static async Task<bool> DeleteInvoiceAsync(int id)
+        {
+            return InvoiceBL.DeleteInvoice(id);
+        }
+
+        public static bool DeleteInvoice(int id)
         {
             return InvoiceBL.DeleteInvoice(id);
         }
@@ -211,17 +237,28 @@ namespace Ccom.Pharmacy.API
             return ItemCategoryBL.GetAllItemCategory();
         }
 
-        //public static List<ItemCategoryEntity> GetAllItemCategory()
-        //{
-        //    return ItemCategoryBL.GetAllItemCategory();
-        //}
+        public static List<ItemCategoryEntity> GetAllItemCategory()
+        {
+            return ItemCategoryBL.GetAllItemCategory();
+        }
 
         public static async Task<int> AddUpdateItemCategoryAsync(ItemCategoryEntity itemCategoryEntity)
         {
             return ItemCategoryBL.AddUpdateItemCategory(itemCategoryEntity);
         }
 
+        public static int AddUpdateItemCategory(ItemCategoryEntity itemCategoryEntity)
+        {
+            return ItemCategoryBL.AddUpdateItemCategory(itemCategoryEntity);
+        }
+
         public static async Task<bool> DeleteItemCategoryAsync(int id)
+        {
+            return ItemCategoryBL.DeleteItemCategory(id);
+        }
+
+
+        public static bool DeleteItemCategory(int id)
         {
             return ItemCategoryBL.DeleteItemCategory(id);
         }
@@ -233,10 +270,10 @@ namespace Ccom.Pharmacy.API
             return UserDetailBL.GetUserDetailsByPasswordUsername(userName, password);
         }
 
-        //public static UserEntity GetUserDetailsByPasswordUsername(string userName, string password)
-        //{
-        //    return UserDetailBL.GetUserDetailsByPasswordUsername(userName, password);
-        //}
+        public static UserEntity GetUserDetailsByPasswordUsername(string userName, string password)
+        {
+            return UserDetailBL.GetUserDetailsByPasswordUsername(userName, password);
+        }
 
         public static List<ModuleEntity> GetModules(UserEntity userEntity)
         {
@@ -273,15 +310,20 @@ namespace Ccom.Pharmacy.API
             return UserRoleBL.GetUserRoles();
         }
 
+        public static List<UserRoleEntity> GetUserRoles()
+        {
+            return UserRoleBL.GetUserRoles();
+        }
+
         public static async Task<List<UserRoleEntity>> GetModulesByUserRoleIdAsync(int userRoleId)
         {
             return UserRoleBL.GetModulesByUserRoleId(userRoleId);
         }
 
-        //public static List<UserRoleEntity> GetModulesByUserRoleId(int userRoleId)
-        //{
-        //    return UserRoleBL.GetModulesByUserRoleId(userRoleId);
-        //}
+        public static List<UserRoleEntity> GetModulesByUserRoleId(int userRoleId)
+        {
+            return UserRoleBL.GetModulesByUserRoleId(userRoleId);
+        }
 
         //public static List<UserCategoryEntity> GetUserCategories()
         //{
@@ -289,6 +331,11 @@ namespace Ccom.Pharmacy.API
         //}
 
         public static async Task<List<ModuleEntity>> GetAllModulesAsync()
+        {
+            return ModuleBL.GetAllModules();
+        }
+
+        public static List<ModuleEntity> GetAllModules()
         {
             return ModuleBL.GetAllModules();
         }

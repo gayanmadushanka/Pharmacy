@@ -2,6 +2,7 @@
 using System.Transactions;
 using Ccom.Pharmacy.DAL.Configurations;
 using Ccom.Pharmacy.DAL.Entity;
+using Ccom.Pharmacy.DAL.Migrations;
 
 namespace Ccom.Pharmacy.DAL
 {
@@ -25,7 +26,7 @@ namespace Ccom.Pharmacy.DAL
             : base("PharmacySqlDbContext")
         //: base("Data Source=MADUSHANKA-PC;Initial Catalog=PharmacyDb;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False")
         {
-            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<DataBaseContext, Configuration>("PharmacyMySqlDbContext"));
+            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<DataBaseContext, Configuration>("PharmacySqlDbContext"));
 
             Database.SetInitializer<DataBaseContext>(null);
 

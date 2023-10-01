@@ -11,8 +11,8 @@ namespace Ccom.Pharmacy.Views
         public ReportView()
         {
             InitializeComponent();
-            NavigationManager.ReportViewer = ReportViewer;
-            ReportViewer.ZoomMode = ZoomMode.PageWidth;
+            //NavigationManager.ReportViewer = ReportViewer;
+            //ReportViewer.ZoomMode = ZoomMode.PageWidth;
         }
     }
 }

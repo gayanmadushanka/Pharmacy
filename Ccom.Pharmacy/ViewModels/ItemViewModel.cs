@@ -12,7 +12,7 @@ using Ccom.Pharmacy.DAL.Entity;
 using Ccom.Pharmacy.Delegates;
 using Ccom.Pharmacy.Managers;
 using Ccom.Pharmacy.Views;
-using Excel = Microsoft.Office.Interop.Excel;
+//using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Ccom.Pharmacy.ViewModels
 {
@@ -247,20 +247,20 @@ namespace Ccom.Pharmacy.ViewModels
         {
             try
             {
-                Excel.Application xlApp = new Excel.Application();
-                Excel.Workbook xlWorkBook = xlApp.Workbooks.Open(fileName, 0, true, 5, "", "", true, Excel.XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
-                Excel.Worksheet xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+                //Excel.Application xlApp = new Excel.Application();
+                //Excel.Workbook xlWorkBook = xlApp.Workbooks.Open(fileName, 0, true, 5, "", "", true, Excel.XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
+                //Excel.Worksheet xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
 
-                Excel.Range range = xlWorkSheet.UsedRange;
+                //Excel.Range range = xlWorkSheet.UsedRange;
 
-                GetItemValue(range);
+                //GetItemValue(range);
 
-                xlWorkBook.Close(true, null, null);
-                xlApp.Quit();
+                //xlWorkBook.Close(true, null, null);
+                //xlApp.Quit();
 
-                ReleaseObject(xlWorkSheet);
-                ReleaseObject(xlWorkBook);
-                ReleaseObject(xlApp);
+                //ReleaseObject(xlWorkSheet);
+                //ReleaseObject(xlWorkBook);
+                //ReleaseObject(xlApp);
             }
             catch (Exception ex)
             {
@@ -268,94 +268,94 @@ namespace Ccom.Pharmacy.ViewModels
             }
         }
 
-        private async void GetItemValue(Excel.Range range)
-        {
-            try
-            {
-                List<ItemCategoryEntity> itemCategoryEntities = await PharmacyAPI.GetAllItemCategoryAsync();
-                List<SupplierEntity> supplierEntities = await PharmacyAPI.GetAllSupplierAsync();
-                for (int rCnt = 1; rCnt <= range.Rows.Count; rCnt++)
-                {
-                    ItemEntity itemEntity = new ItemEntity();
-                    for (int cCnt = 1; cCnt <= range.Columns.Count; cCnt++)
-                    {
-                        if (range.Cells[rCnt, cCnt] as Excel.Range != null)
-                        {
-                            switch (cCnt)
-                            {
-                                case 1:
-                                    itemEntity.Name = (string)(range.Cells[rCnt, cCnt] as Excel.Range).Value2;
-                                    break;
-                                case 2:
-                                    itemEntity.WholeSalePrice = (range.Cells[rCnt, cCnt] as Excel.Range).Value2;
-                                    break;
-                                case 3:
-                                    itemEntity.UnitPrice = (range.Cells[rCnt, cCnt] as Excel.Range).Value2;
-                                    break;
-                                case 4:
-                                    itemEntity.Quantity = Convert.ToInt32((range.Cells[rCnt, cCnt] as Excel.Range).Value2);
-                                    break;
-                                case 5:
-                                    object value2 = (range.Cells[rCnt, cCnt] as Excel.Range).Value2;
+        //private async void GetItemValue(Excel.Range range)
+        //{
+        //    try
+        //    {
+        //        List<ItemCategoryEntity> itemCategoryEntities = await PharmacyAPI.GetAllItemCategoryAsync();
+        //        List<SupplierEntity> supplierEntities = await PharmacyAPI.GetAllSupplierAsync();
+        //        for (int rCnt = 1; rCnt <= range.Rows.Count; rCnt++)
+        //        {
+        //            ItemEntity itemEntity = new ItemEntity();
+        //            for (int cCnt = 1; cCnt <= range.Columns.Count; cCnt++)
+        //            {
+        //                if (range.Cells[rCnt, cCnt] as Excel.Range != null)
+        //                {
+        //                    switch (cCnt)
+        //                    {
+        //                        case 1:
+        //                            itemEntity.Name = (string)(range.Cells[rCnt, cCnt] as Excel.Range).Value2;
+        //                            break;
+        //                        case 2:
+        //                            itemEntity.WholeSalePrice = (range.Cells[rCnt, cCnt] as Excel.Range).Value2;
+        //                            break;
+        //                        case 3:
+        //                            itemEntity.UnitPrice = (range.Cells[rCnt, cCnt] as Excel.Range).Value2;
+        //                            break;
+        //                        case 4:
+        //                            itemEntity.Quantity = Convert.ToInt32((range.Cells[rCnt, cCnt] as Excel.Range).Value2);
+        //                            break;
+        //                        case 5:
+        //                            object value2 = (range.Cells[rCnt, cCnt] as Excel.Range).Value2;
 
-                                    if (value2 != null)
-                                    {
-                                        if (value2 is double)
-                                        {
-                                            itemEntity.ExpireDate = DateTime.FromOADate((double)value2);
-                                        }
-                                        else
-                                        {
-                                            DateTime expireDate;
-                                            DateTime.TryParse((string)value2, out expireDate);
-                                            itemEntity.ExpireDate = expireDate;
-                                        }
-                                    }
-                                    //itemEntity.ExpireDate = 
-                                    break;
-                                case 6:
-                                    string supplierName = (string)(range.Cells[rCnt, cCnt] as Excel.Range).Value2;
-                                    int supplierId;
-                                    if (!IsSupplierAvailable(supplierName, supplierEntities, out supplierId))
-                                    {
-                                        itemEntity.SupplierId = PharmacyAPI.AddUpdateSupplierAsync(new SupplierEntity { FirstName = supplierName }).Result;
-                                        supplierEntities.Add(new SupplierEntity { Id = itemEntity.SupplierId, FirstName = supplierName });
-                                    }
-                                    else
-                                    {
-                                        itemEntity.SupplierId = supplierId;
-                                    }
-                                    break;
-                                case 7:
-                                    string itemCategoryName = (string)(range.Cells[rCnt, cCnt] as Excel.Range).Value2;
-                                    int itemCategoryId;
-                                    if (!IsItemCategoryAvailable(itemCategoryName, itemCategoryEntities, out itemCategoryId))
-                                    {
-                                        itemEntity.ItemCategoryId = PharmacyAPI.AddUpdateItemCategoryAsync(new ItemCategoryEntity { Name = itemCategoryName }).Result;
-                                        itemCategoryEntities.Add(new ItemCategoryEntity { Id = itemEntity.ItemCategoryId, Name = itemCategoryName });
-                                    }
-                                    else
-                                    {
-                                        itemEntity.ItemCategoryId = itemCategoryId;
-                                    }
-                                    break;
-                            }
-                        }
-                        else
-                        {
-                            return;
-                        }
-                    }
-                    itemEntity.Discount = itemEntity.UnitPrice == 0.00 ? 0 : ((itemEntity.UnitPrice - itemEntity.WholeSalePrice) / itemEntity.UnitPrice) * 100;
-                    itemEntity.TotalAmount = itemEntity.UnitPrice * itemEntity.Quantity;
-                    SavaItem(itemEntity);
-                }
-            }
-            catch (Exception ex)
-            {
-                UserInterfaceExceptionHandler.HandleExcetion(ref ex);
-            }
-        }
+        //                            if (value2 != null)
+        //                            {
+        //                                if (value2 is double)
+        //                                {
+        //                                    itemEntity.ExpireDate = DateTime.FromOADate((double)value2);
+        //                                }
+        //                                else
+        //                                {
+        //                                    DateTime expireDate;
+        //                                    DateTime.TryParse((string)value2, out expireDate);
+        //                                    itemEntity.ExpireDate = expireDate;
+        //                                }
+        //                            }
+        //                            //itemEntity.ExpireDate = 
+        //                            break;
+        //                        case 6:
+        //                            string supplierName = (string)(range.Cells[rCnt, cCnt] as Excel.Range).Value2;
+        //                            int supplierId;
+        //                            if (!IsSupplierAvailable(supplierName, supplierEntities, out supplierId))
+        //                            {
+        //                                itemEntity.SupplierId = PharmacyAPI.AddUpdateSupplierAsync(new SupplierEntity { FirstName = supplierName }).Result;
+        //                                supplierEntities.Add(new SupplierEntity { Id = itemEntity.SupplierId, FirstName = supplierName });
+        //                            }
+        //                            else
+        //                            {
+        //                                itemEntity.SupplierId = supplierId;
+        //                            }
+        //                            break;
+        //                        case 7:
+        //                            string itemCategoryName = (string)(range.Cells[rCnt, cCnt] as Excel.Range).Value2;
+        //                            int itemCategoryId;
+        //                            if (!IsItemCategoryAvailable(itemCategoryName, itemCategoryEntities, out itemCategoryId))
+        //                            {
+        //                                itemEntity.ItemCategoryId = PharmacyAPI.AddUpdateItemCategoryAsync(new ItemCategoryEntity { Name = itemCategoryName }).Result;
+        //                                itemCategoryEntities.Add(new ItemCategoryEntity { Id = itemEntity.ItemCategoryId, Name = itemCategoryName });
+        //                            }
+        //                            else
+        //                            {
+        //                                itemEntity.ItemCategoryId = itemCategoryId;
+        //                            }
+        //                            break;
+        //                    }
+        //                }
+        //                else
+        //                {
+        //                    return;
+        //                }
+        //            }
+        //            itemEntity.Discount = itemEntity.UnitPrice == 0.00 ? 0 : ((itemEntity.UnitPrice - itemEntity.WholeSalePrice) / itemEntity.UnitPrice) * 100;
+        //            itemEntity.TotalAmount = itemEntity.UnitPrice * itemEntity.Quantity;
+        //            SavaItem(itemEntity);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        UserInterfaceExceptionHandler.HandleExcetion(ref ex);
+        //    }
+        //}
 
         private bool IsSupplierAvailable(string supplieName, List<SupplierEntity> supplieEntities, out int supplieId)
         {

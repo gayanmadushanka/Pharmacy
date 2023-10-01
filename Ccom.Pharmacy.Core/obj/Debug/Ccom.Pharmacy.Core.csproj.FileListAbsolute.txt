@@ -1,0 +1,6 @@
+D:\Workspace\Pharmacy\Ccom.Pharmacy.Core\bin\Debug\Ccom.Pharmacy.Core.dll
+D:\Workspace\Pharmacy\Ccom.Pharmacy.Core\bin\Debug\Ccom.Pharmacy.Core.pdb
+D:\Workspace\Pharmacy\Ccom.Pharmacy.Core\obj\Debug\Ccom.Pharmacy.Core.csproj.AssemblyReference.cache
+D:\Workspace\Pharmacy\Ccom.Pharmacy.Core\obj\Debug\Ccom.Pharmacy.Core.csproj.CoreCompileInputs.cache
+D:\Workspace\Pharmacy\Ccom.Pharmacy.Core\obj\Debug\Ccom.Pharmacy.Core.dll
+D:\Workspace\Pharmacy\Ccom.Pharmacy.Core\obj\Debug\Ccom.Pharmacy.Core.pdb

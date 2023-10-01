@@ -1,0 +1,15 @@
+D:\Workspace\Pharmacy\Ccom.ExceptionHandling\bin\Debug\Ccom.ExceptionHandling.dll
+D:\Workspace\Pharmacy\Ccom.ExceptionHandling\bin\Debug\Ccom.ExceptionHandling.pdb
+D:\Workspace\Pharmacy\Ccom.ExceptionHandling\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Workspace\Pharmacy\Ccom.ExceptionHandling\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Workspace\Pharmacy\Ccom.ExceptionHandling\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+D:\Workspace\Pharmacy\Ccom.ExceptionHandling\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\Workspace\Pharmacy\Ccom.ExceptionHandling\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+D:\Workspace\Pharmacy\Ccom.ExceptionHandling\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+D:\Workspace\Pharmacy\Ccom.ExceptionHandling\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.xml
+D:\Workspace\Pharmacy\Ccom.ExceptionHandling\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.xml
+D:\Workspace\Pharmacy\Ccom.ExceptionHandling\obj\Debug\Ccom.ExceptionHandling.csproj.AssemblyReference.cache
+D:\Workspace\Pharmacy\Ccom.ExceptionHandling\obj\Debug\Ccom.ExceptionHandling.csproj.CoreCompileInputs.cache
+D:\Workspace\Pharmacy\Ccom.ExceptionHandling\obj\Debug\Ccom.ExceptionHandling.csproj.CopyComplete
+D:\Workspace\Pharmacy\Ccom.ExceptionHandling\obj\Debug\Ccom.ExceptionHandling.dll
+D:\Workspace\Pharmacy\Ccom.ExceptionHandling\obj\Debug\Ccom.ExceptionHandling.pdb

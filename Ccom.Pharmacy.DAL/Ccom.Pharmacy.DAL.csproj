@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,12 +10,15 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Ccom.Pharmacy.DAL</RootNamespace>
     <AssemblyName>Ccom.Pharmacy.DAL</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,11 +38,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data">
       <HintPath>..\packages\MySql.Data.6.9.5\lib\net45\MySql.Data.dll</HintPath>
@@ -85,61 +89,9 @@
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="Managers\ConstantManager.cs" />
-    <Compile Include="Migrations\201503130505349_new1.cs" />
-    <Compile Include="Migrations\201503130505349_new1.Designer.cs">
-      <DependentUpon>201503130505349_new1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201503130643574_new2.cs" />
-    <Compile Include="Migrations\201503130643574_new2.Designer.cs">
-      <DependentUpon>201503130643574_new2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201503130701496_new3.cs" />
-    <Compile Include="Migrations\201503130701496_new3.Designer.cs">
-      <DependentUpon>201503130701496_new3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201503130932509_new4.cs" />
-    <Compile Include="Migrations\201503130932509_new4.Designer.cs">
-      <DependentUpon>201503130932509_new4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201503170518008_new9.cs" />
-    <Compile Include="Migrations\201503170518008_new9.Designer.cs">
-      <DependentUpon>201503170518008_new9.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201503170824434_new10.cs" />
-    <Compile Include="Migrations\201503170824434_new10.Designer.cs">
-      <DependentUpon>201503170824434_new10.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201503171348058_new11.cs" />
-    <Compile Include="Migrations\201503171348058_new11.Designer.cs">
-      <DependentUpon>201503171348058_new11.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201503190151266_new12.cs" />
-    <Compile Include="Migrations\201503190151266_new12.Designer.cs">
-      <DependentUpon>201503190151266_new12.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201503191943203_new14.cs" />
-    <Compile Include="Migrations\201503191943203_new14.Designer.cs">
-      <DependentUpon>201503191943203_new14.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201504020043125_new90.cs" />
-    <Compile Include="Migrations\201504020043125_new90.Designer.cs">
-      <DependentUpon>201504020043125_new90.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201504201104241_new45.cs" />
-    <Compile Include="Migrations\201504201104241_new45.Designer.cs">
-      <DependentUpon>201504201104241_new45.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201504201107095_new451.cs" />
-    <Compile Include="Migrations\201504201107095_new451.Designer.cs">
-      <DependentUpon>201504201107095_new451.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201504201131222_new46.cs" />
-    <Compile Include="Migrations\201504201131222_new46.Designer.cs">
-      <DependentUpon>201504201131222_new46.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201504201746326_new48.cs" />
-    <Compile Include="Migrations\201504201746326_new48.Designer.cs">
-      <DependentUpon>201504201746326_new48.cs</DependentUpon>
+    <Compile Include="Migrations\202309232045377_1.cs" />
+    <Compile Include="Migrations\202309232045377_1.designer.cs">
+      <DependentUpon>202309232045377_1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -177,50 +129,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201503130505349_new1.resx">
-      <DependentUpon>201503130505349_new1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201503130643574_new2.resx">
-      <DependentUpon>201503130643574_new2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201503130701496_new3.resx">
-      <DependentUpon>201503130701496_new3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201503130932509_new4.resx">
-      <DependentUpon>201503130932509_new4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201503170518008_new9.resx">
-      <DependentUpon>201503170518008_new9.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201503170824434_new10.resx">
-      <DependentUpon>201503170824434_new10.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201503171348058_new11.resx">
-      <DependentUpon>201503171348058_new11.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201503190151266_new12.resx">
-      <DependentUpon>201503190151266_new12.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201503191943203_new14.resx">
-      <DependentUpon>201503191943203_new14.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504020043125_new90.resx">
-      <DependentUpon>201504020043125_new90.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504201104241_new45.resx">
-      <DependentUpon>201504201104241_new45.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504201107095_new451.resx">
-      <DependentUpon>201504201107095_new451.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504201131222_new46.resx">
-      <DependentUpon>201504201131222_new46.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504201746326_new48.resx">
-      <DependentUpon>201504201746326_new48.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202309232045377_1.resx">
+      <DependentUpon>202309232045377_1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

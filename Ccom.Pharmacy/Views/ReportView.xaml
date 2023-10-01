@@ -38,9 +38,9 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <WindowsFormsHost>
+            <!--<WindowsFormsHost>
                 <winForms:ReportViewer x:Name="ReportViewer"  AutoScroll="True"></winForms:ReportViewer>
-            </WindowsFormsHost>
+            </WindowsFormsHost>-->
         </Grid>
     </Grid>
 </UserControl>

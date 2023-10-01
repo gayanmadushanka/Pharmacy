@@ -1,4 +1,4 @@
-using System.Windows.Interactivity;
+using Microsoft.Xaml.Behaviors;
 using US_MetroControllers.Controls;
 
 namespace US_MetroControllers.Behaviours

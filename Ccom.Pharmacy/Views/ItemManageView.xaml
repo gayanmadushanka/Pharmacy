@@ -72,9 +72,9 @@
             <TextBox x:Name="TbWholeSalePrice" TextWrapping="Wrap" Margin="0,0,0,5" Width="Auto" MinWidth="150" Height="24" Background="#FFF0F0F0" VerticalContentAlignment="Center">
                 <TextBox.Text>
                     <Binding Path="Item.WholeSalePrice" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" >
-                        <Binding.ValidationRules>
+                        <!--<Binding.ValidationRules>
                             <validations:RequiredFieldRule/>
-                        </Binding.ValidationRules>
+                        </Binding.ValidationRules>-->
                     </Binding>
                 </TextBox.Text>
             </TextBox>
@@ -82,9 +82,9 @@
             <TextBox x:Name="TbDiscount" TextWrapping="Wrap" Margin="0,0,0,5" Width="Auto" MinWidth="150" Height="24" Background="#FFF0F0F0" VerticalContentAlignment="Center">
                 <TextBox.Text>
                     <Binding Path="Item.Discount" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" >
-                        <Binding.ValidationRules>
+                        <!--<Binding.ValidationRules>
                             <validations:RequiredFieldRule/>
-                        </Binding.ValidationRules>
+                        </Binding.ValidationRules>-->
                     </Binding>
                 </TextBox.Text>
             </TextBox>
@@ -92,9 +92,9 @@
             <TextBox x:Name="TbQuantity" TextChanged="TbQuantity_OnTextChanged" utils:TextBoxValidation.Filter="PositiveInteger" TextWrapping="Wrap" Margin="0,0,0,5" Width="Auto" MinWidth="150" Height="24" Background="#FFF0F0F0" VerticalContentAlignment="Center">
                 <TextBox.Text>
                     <Binding Path="Item.Quantity" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" >
-                        <Binding.ValidationRules>
+                        <!--<Binding.ValidationRules>
                             <validations:RequiredFieldRule/>
-                        </Binding.ValidationRules>
+                        </Binding.ValidationRules>-->
                     </Binding>
                 </TextBox.Text>
             </TextBox>
@@ -102,9 +102,9 @@
             <TextBox x:Name="TbTotalAmount" TextWrapping="Wrap" Margin="0,0,0,5" Width="Auto" MinWidth="150" Height="24" Background="#FFF0F0F0" VerticalContentAlignment="Center" IsEnabled="False">
                 <TextBox.Text>
                     <Binding Path="Item.TotalAmount" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" >
-                        <Binding.ValidationRules>
+                        <!--<Binding.ValidationRules>
                             <validations:RequiredFieldRule/>
-                        </Binding.ValidationRules>
+                        </Binding.ValidationRules>-->
                     </Binding>
                 </TextBox.Text>
             </TextBox>
@@ -118,11 +118,11 @@
                         <GradientStop Color="#FFF0F0F0" Offset="1"/>
                     </LinearGradientBrush>
                 </ComboBox.Background>
-                <i:Interaction.Triggers>
+                <!--<i:Interaction.Triggers>
                     <i:EventTrigger EventName="SelectionChanged">
                         <i:InvokeCommandAction Command="{Binding ItemCategorySelectionCommand}"/>
                     </i:EventTrigger>
-                </i:Interaction.Triggers>
+                </i:Interaction.Triggers>-->
             </ComboBox>
             <TextBlock Text="Supplier" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" Margin="0,0,0,5"/>
             <ComboBox x:Name="CmbSupplier" ItemsSource="{Binding SupplierList, Mode=TwoWay}" DisplayMemberPath="FirstName" SelectedItem="{Binding SelectedSupplier, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,5" Width="Auto" MinWidth="150" Height="24" VerticalAlignment="Center">
@@ -132,11 +132,11 @@
                         <GradientStop Color="#FFF0F0F0" Offset="1"/>
                     </LinearGradientBrush>
                 </ComboBox.Background>
-                <i:Interaction.Triggers>
+                <!--<i:Interaction.Triggers>
                     <i:EventTrigger EventName="SelectionChanged">
                         <i:InvokeCommandAction Command="{Binding SupplierSelectionCommand}"/>
                     </i:EventTrigger>
-                </i:Interaction.Triggers>
+                </i:Interaction.Triggers>-->
             </ComboBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="30" Width="175">

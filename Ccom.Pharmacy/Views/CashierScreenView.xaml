@@ -31,11 +31,11 @@
         <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0">
             <TextBlock TextWrapping="Wrap" Text="Name" VerticalAlignment="Center" Margin="5,0" FontWeight="Bold"/>
             <TextBox TextWrapping="Wrap" Text="{Binding SearchByItemName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="Auto" MinWidth="150" Margin="5,5,0,5" Height="24" Background="#FFF0F0F0" VerticalContentAlignment="Center">
-                <i:Interaction.Triggers>
+                <!--<i:Interaction.Triggers>
                     <i:EventTrigger EventName="KeyUp">
                         <i:InvokeCommandAction Command="{Binding FilterCommand}"/>
                     </i:EventTrigger>
-                </i:Interaction.Triggers>
+                </i:Interaction.Triggers>-->
             </TextBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
@@ -47,11 +47,11 @@
                         <GradientStop Color="#FFF0F0F0" Offset="1"/>
                     </LinearGradientBrush>
                 </ComboBox.Background>
-                <i:Interaction.Triggers>
+                <!--<i:Interaction.Triggers>
                     <i:EventTrigger EventName="SelectionChanged">
                         <i:InvokeCommandAction Command="{Binding FilterCommand}"/>
                     </i:EventTrigger>
-                </i:Interaction.Triggers>
+                </i:Interaction.Triggers>-->
             </ComboBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,200,0" Width="219">
@@ -66,11 +66,11 @@
             <ListBox.InputBindings>
                 <KeyBinding Key="Enter" Command="{Binding ItemSelectionCommand}" CommandParameter="{Binding SelectedItem, ElementName=ItemListBox}"></KeyBinding>
             </ListBox.InputBindings>
-            <i:Interaction.Triggers>
+            <!--<i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseDoubleClick">
                     <i:InvokeCommandAction Command="{Binding ItemSelectionCommand}" CommandParameter="{Binding SelectedItem, ElementName=ItemListBox}" />
                 </i:EventTrigger>
-            </i:Interaction.Triggers>
+            </i:Interaction.Triggers>-->
         </ListBox>
         <DataGrid x:Name="DgItem" ItemsSource="{Binding Invoice.InvoiceItemEntities,Mode=TwoWay}" Width="Auto" Grid.Row="1" Grid.Column="1" AutoGenerateColumns="False" CanUserAddRows="False" AlternatingRowBackground="{DynamicResource AccentColorBrush2}" RowHeight="25" SelectionUnit="FullRow" GridLinesVisibility="All" SelectionMode="Single" Margin="5,0" HeadersVisibility="Column" RowBackground="{DynamicResource BackgroundBrush}">
             <DataGrid.Resources>
@@ -120,11 +120,11 @@
                             </Binding.ValidationRules>
                         </Binding>
                     </TextBox.Text>
-                    <i:Interaction.Triggers>
+                    <!--<i:Interaction.Triggers>
                         <i:EventTrigger EventName="TextChanged">
                             <i:InvokeCommandAction Command="{Binding DiscountSelectionCommand}" CommandParameter="{Binding Text, ElementName=TbDiscount}" />
                         </i:EventTrigger>
-                    </i:Interaction.Triggers>
+                    </i:Interaction.Triggers>-->
                 </TextBox>
                 <TextBlock TextWrapping="Wrap" Text="%" VerticalAlignment="Center" FontSize="14" FontWeight="Bold" Height="25" Margin="0,5" MinWidth="10" HorizontalAlignment="Left" />
             </StackPanel>
@@ -142,11 +142,11 @@
                             </Binding.ValidationRules>
                         </Binding>
                     </TextBox.Text>
-                    <i:Interaction.Triggers>
+                    <!--<i:Interaction.Triggers>
                         <i:EventTrigger EventName="TextChanged">
                             <i:InvokeCommandAction Command="{Binding CashSelectionCommand}" CommandParameter="{Binding Text, ElementName=TbCash}" />
                         </i:EventTrigger>
-                    </i:Interaction.Triggers>
+                    </i:Interaction.Triggers>-->
                 </TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Height="25">
